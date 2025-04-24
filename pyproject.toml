@@ -1,0 +1,22 @@
+[project]
+name = "proj_garagem"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "renascm_", email = "renatochagas.m@gmail.com_"},
+]
+dependencies = ["django>=4.2.20"]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+dev = "python src/manage.py runserver"
+createsuperuser = "python src/manage.py createsuperuser"
+pre_migrate = "python src/manage.py makemigrations"
+migrate = "python src/manage.py migrate"
+startapp = "python src/manage.py startapp {args}"
