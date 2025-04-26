@@ -1,7 +1,7 @@
-from rest_framework.viewsets import ModelViewset
-from core.garagem.models import Veiculo
-from core.garagem.serializers import VeiculoSerializer
+from rest_framework.viewsets import ModelViewSet
+from core.garagem.models import Cor
+from core.garagem.serializers import CorSerializer
 
-class VeiculoViewSet(ModelViewset):
-    queryset = Veiculo.objects.all()
-    serializer_class = VeiculoSerializer
+class CorViewSet(ModelViewSet):
+    queryset = Cor.objects.all()
+    serializer_class = CorSerializer
