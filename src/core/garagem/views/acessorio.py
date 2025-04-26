@@ -1,7 +1,7 @@
-from rest_framwork.viewsets import ModelViewset
-from core.garagem.models import Veiculo
-from core.garagem.serializers import VeiculoSerializer
+from rest_framework.viewsets import ModelViewset
+from core.garagem.models import Acessorio
+from core.garagem.serializers import AcessorioSerializer
 
 class VeiculoViewSet(ModelViewset):
-    queryset = Veiculo.objects.all()
-    serializer_class = VeiculoSerializer
+    queryset = Acessorio.objects.all()
+    serializer_class = AcessorioSerializer

@@ -1,4 +1,4 @@
-from rest_framwork.viewsets import ModelViewset
+from rest_framework.viewsets import ModelViewset
 from core.garagem.models import Veiculo
 from core.garagem.serializers import VeiculoSerializer
 
