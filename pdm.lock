@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:57030f66b97d315342d42a74971aa275d950f641a276a2ce531dc4bfe6911180"
+content_hash = "sha256:237682d33ccaf84c800831ce5770ad6998703e5d286ddaeb6f0e634d3a5f1705"
 
 [[metadata.targets]]
 requires_python = ">=3.9"
@@ -68,6 +68,16 @@ dependencies = [
 files = [
     {file = "djangorestframework-3.16.0-py3-none-any.whl", hash = "sha256:bea7e9f6b96a8584c5224bfb2e4348dfb3f8b5e34edbecb98da258e892089361"},
     {file = "djangorestframework-3.16.0.tar.gz", hash = "sha256:f022ff46613584de994c0c6a4aebbace5fd700555fbe9d33b865ebf173eba6c9"},
+]
+
+[[package]]
+name = "pygraphviz"
+version = "1.11"
+requires_python = ">=3.8"
+summary = "Python interface to Graphviz"
+groups = ["default"]
+files = [
+    {file = "pygraphviz-1.11.zip", hash = "sha256:a97eb5ced266f45053ebb1f2c6c6d29091690503e3a5c14be7f908b37b06f2d4"},
 ]
 
 [[package]]
