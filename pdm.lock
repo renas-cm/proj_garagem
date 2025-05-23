@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:c71114436490d0be6afcd6bdb56c17b1236bb7a3552c191436b2a3aa2d9648b0"
+content_hash = "sha256:b19ecd6720d59ff75b68fef306eeeafda432a627d88bed9f07839825e66eaaf9"
 
 [[metadata.targets]]
 requires_python = ">=3.9"
@@ -230,16 +230,6 @@ files = [
 ]
 
 [[package]]
-name = "pygraphviz"
-version = "1.11"
-requires_python = ">=3.8"
-summary = "Python interface to Graphviz"
-groups = ["default"]
-files = [
-    {file = "pygraphviz-1.11.zip", hash = "sha256:a97eb5ced266f45053ebb1f2c6c6d29091690503e3a5c14be7f908b37b06f2d4"},
-]
-
-[[package]]
 name = "python-dotenv"
 version = "1.1.0"
 requires_python = ">=3.9"
@@ -298,4 +288,15 @@ dependencies = [
 files = [
     {file = "uvicorn-0.34.2-py3-none-any.whl", hash = "sha256:deb49af569084536d269fe0a6d67e3754f104cf03aba7c11c40f01aadf33c403"},
     {file = "uvicorn-0.34.2.tar.gz", hash = "sha256:0e929828f6186353a80b58ea719861d2629d766293b6d19baf086ba31d4f3328"},
+]
+
+[[package]]
+name = "whitenoise"
+version = "6.9.0"
+requires_python = ">=3.9"
+summary = "Radically simplified static file serving for WSGI applications"
+groups = ["default"]
+files = [
+    {file = "whitenoise-6.9.0-py3-none-any.whl", hash = "sha256:c8a489049b7ee9889617bb4c274a153f3d979e8f51d2efd0f5b403caf41c57df"},
+    {file = "whitenoise-6.9.0.tar.gz", hash = "sha256:8c4a7c9d384694990c26f3047e118c691557481d624f069b7f7752a2f735d609"},
 ]
