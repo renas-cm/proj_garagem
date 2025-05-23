@@ -13,3 +13,7 @@ services:
     repo: https://github.com/seu-usuario/seu-repo
     branch: main
     autoDeploy: true
+
+envVars:
+  - key: SECRET_KEY
+    value: ^+n2_=django-insecure-((oo@=p_8sx69-y585&-_*tm_o@+_7^sk!w-^$0rprdh8bez4&
