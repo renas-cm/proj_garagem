@@ -19,6 +19,11 @@
 # Sai do script se houver algum erro
 set -e
 
+echo "Instalando dependências do sistema para Graphviz..."
+# Atualiza a lista de pacotes e instala Graphviz e suas bibliotecas de desenvolvimento
+apt-get update
+apt-get install -y graphviz libgraphviz-dev pkg-config
+
 echo "Atualizando pip (não estritamente necessário se PDM gerencia, mas não custa)"
 pip install --upgrade pip
 
@@ -26,8 +31,6 @@ echo "Instalando PDM para garantir que esteja disponível no ambiente de build d
 pip install pdm
 
 echo "Instalando dependências do projeto com PDM"
-# O comando 'pdm install' ou 'pdm sync' irá instalar as dependências de pyproject.toml/pdm.lock
-# 'pdm sync --prod' é uma boa opção para garantir apenas dependências de produção
 pdm sync --prod
 
 echo "Coleta os arquivos estáticos"
@@ -35,7 +38,3 @@ pdm run python manage.py collectstatic --no-input
 
 echo "Aplica as migrações"
 pdm run python manage.py migrate
-
-# Opcional: Se você precisa criar um superusuário ou algo do tipo
-# echo "Criando superusuário (se necessário)"
-# pdm run python manage.py createsuperuser --noinput || true # Use --noinput e || true para não parar o build
