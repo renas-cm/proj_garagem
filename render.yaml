@@ -1,18 +1,20 @@
 services:
   - type: web
-    name: meu-app-pdm
-    env: python
-    plan: free
+    name: proj_garagem
+    runtime: python
     buildCommand: |
       curl -sSL https://pdm.fming.dev/install-pdm.py | python3 -
-      export PATH="$HOME/.local/bin:$PATH"
+      export PATH=$HOME/.local/bin:$PATH
       pdm install
+      python manage.py collectstatic --no-input
     startCommand: |
-      export PATH="$HOME/.local/bin:$PATH"
-      pdm run python app.py
-    repo: https://github.com/seu-usuario/seu-repo
+      export PATH=$HOME/.local/bin:$PATH
+      pdm run gunicorn nome_do_projeto.wsgi:application
+    env: python
     branch: main
-    autoDeploy: true
+    region: oregon
+    plan: free
+
 
 envVars:
   - key: SECRET_KEY
