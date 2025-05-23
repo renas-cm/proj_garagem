@@ -8,10 +8,10 @@ pip install --upgrade pip
 # Instala as dependências
 pip install -r requirements.txt
 
+ls
 # Coleta os arquivos estáticos
 python manage.py collectstatic --no-input
 
-ls
 
 # Aplica as migrações
 python manage.py migrate
