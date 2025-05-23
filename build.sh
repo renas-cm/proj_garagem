@@ -19,11 +19,6 @@
 # Sai do script se houver algum erro
 set -e
 
-echo "Instalando dependências do sistema para Graphviz..."
-# Atualiza a lista de pacotes e instala Graphviz e suas bibliotecas de desenvolvimento
-apt-get update
-apt-get install -y graphviz libgraphviz-dev pkg-config
-
 echo "Atualizando pip (não estritamente necessário se PDM gerencia, mas não custa)"
 pip install --upgrade pip
 
