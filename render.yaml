@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: meu-app-pdm
+    env: python
+    plan: free
+    buildCommand: |
+      curl -sSL https://pdm.fming.dev/install-pdm.py | python3 -
+      export PATH="$HOME/.local/bin:$PATH"
+      pdm install
+    startCommand: |
+      export PATH="$HOME/.local/bin:$PATH"
+      pdm run python app.py
+    repo: https://github.com/seu-usuario/seu-repo
+    branch: main
+    autoDeploy: true
