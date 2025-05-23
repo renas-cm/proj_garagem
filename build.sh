@@ -26,14 +26,10 @@ echo "Instalando PDM no ambiente de build"
 pip install pdm
 
 echo "Instalando dependências do projeto com PDM"
-pdm sync --prod  # Use --prod para instalar apenas dependências de produção
+pdm sync --prod  # Instala apenas dependências de produção
 
 echo "Coleta os arquivos estáticos"
 pdm run python manage.py collectstatic --no-input
 
 echo "Aplica as migrações"
 pdm run python manage.py migrate
-
-# Se você tiver testes que quer rodar no build, pode adicionar aqui:
-# echo "Rodando testes"
-# pdm run python manage.py test
