@@ -5,3 +5,7 @@
 __pypackages__/
 
 __pycache__/
+
+static/
+
+staticfiles/

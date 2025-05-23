@@ -10,8 +10,8 @@ pip install -r requirements.txt
 
 ls
 # Coleta os arquivos estáticos
-python src/manage.py collectstatic --no-input
+python manage.py collectstatic --no-input
 
 
 # Aplica as migrações
-python src/manage.py migrate
+python manage.py migrate
