@@ -28,4 +28,4 @@ RUN pdm run python manage.py collectstatic --no-input \
 EXPOSE 8000
 
 # Comando para iniciar o servidor (ajuste conforme seu projeto)
-CMD ["pdm", "run", "gunicorn", "meuprojeto.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["pdm", "run", "gunicorn", "proj_garagem.wsgi:application", "--bind", "0.0.0.0:8000"]
