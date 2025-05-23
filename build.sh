@@ -19,17 +19,21 @@
 # Sai do script se houver algum erro
 set -e
 
-echo "Atualizando pip (não estritamente necessário se PDM gerencia, mas não custa)"
+echo "Atualizando pip (opcional, mas seguro)"
 pip install --upgrade pip
 
-echo "Instalando PDM para garantir que esteja disponível no ambiente de build do Render"
+echo "Instalando PDM no ambiente de build"
 pip install pdm
 
 echo "Instalando dependências do projeto com PDM"
-pdm sync --prod
+pdm sync --prod  # Use --prod para instalar apenas dependências de produção
 
 echo "Coleta os arquivos estáticos"
 pdm run python manage.py collectstatic --no-input
 
 echo "Aplica as migrações"
 pdm run python manage.py migrate
+
+# Se você tiver testes que quer rodar no build, pode adicionar aqui:
+# echo "Rodando testes"
+# pdm run python manage.py test
