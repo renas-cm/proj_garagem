@@ -28,6 +28,8 @@ pip install pdm
 echo "Instalando dependências do projeto com PDM"
 pdm sync --prod  # Instala apenas dependências de produção
 
+pdm install
+
 echo "Coleta os arquivos estáticos"
 pdm run python manage.py collectstatic --no-input
 
