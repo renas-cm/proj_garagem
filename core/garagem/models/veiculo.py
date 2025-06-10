@@ -9,3 +9,4 @@ class Veiculo(models.Model):
     
     def __str__(self):
         return f'{self.modelo}, {self.cor}, {self.ano}'
+    
