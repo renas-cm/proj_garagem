@@ -12,24 +12,19 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 import dj_database_url
-
 from dotenv import load_dotenv
+
 
 load_dotenv()
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
 MODE = os.getenv("MODE")
 SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG", "False")
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:172.0.0.1:19003"]
 
 if MODE in ["PRODUCTION", "MIGRATE"]:
     MEDIA_URL = '/media/'
@@ -37,6 +32,8 @@ else:
     MY_IP = os.getenv("MY_IP", "127.0.0.1")
     MEDIA_URL = f"http://{MY_IP}:19003/media/"
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 

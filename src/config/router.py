@@ -11,5 +11,5 @@ router.register(r'acessorios', views.AcessorioViewSet)
 router.register(r'cores', views.CorViewSet)
 router.register(r'modelos', views.ModeloViewSet)
 router.register(r'veiculos', views.VeiculoViewSet)
-
+router.register(r'compras', views.CompraViewSet)
 router.register(r'usuarios', UsuarioViewSet, basename='usuario')

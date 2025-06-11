@@ -5,7 +5,6 @@ from django.utils.translation import gettext_lazy as _
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 from .models import Usuario
 
-
 @admin.register(Usuario)
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
@@ -62,3 +61,4 @@ class CustomUserAdmin(UserAdmin):
     search_fields = ("email",)
     ordering = ("email",)
     readonly_fields = ["date_joined", "last_login"]
+    fields: ("first_name", "last_name", "cpf", "telefone", "data_nascimento", "foto")
