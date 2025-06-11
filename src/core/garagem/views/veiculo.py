@@ -7,9 +7,10 @@ from rest_framework.filters import SearchFilter
 class VeiculoViewSet(ModelViewSet):
     queryset = Veiculo.objects.all()
     serializer_class = VeiculoSerializer
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ["modelo", "ano", "preco"]
-    search_fields = ["modelo__nome",]
+    ordering_fields = ["modelo", "preco"]
+    search_fields = ["modelo",]
 
     def get_serializer_class(self):
         if self.action == "list":

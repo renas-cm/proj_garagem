@@ -5,3 +5,4 @@ from core.garagem.serializers import ModeloSerializer
 class ModeloViewSet(ModelViewSet):
     queryset = Modelo.objects.all()
     serializer_class = ModeloSerializer
+   
