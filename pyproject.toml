@@ -15,6 +15,12 @@ dependencies = [
     "gunicorn>=23.0.0",
     "whitenoise>=6.9.0",
     "django-cors-headers>=4.7.0",
+    "djangorestframework-simplejwt>=5.5.0",
+    "setuptools>=80.9.0",
+    "Pillow>=11.2.1",
+    "python-magic>=0.4.27; sys_platform == \"linux\"",
+    "python-magic-bin>=0.4.14; sys_platform == \"win32, darwin\"",
+    "drf-spectacular>=0.28.0",
 ]
 requires-python = ">=3.9"
 readme = "README.md"
@@ -30,9 +36,9 @@ distribution = false
 
 [tool.pdm.scripts]
 pre_dev = "python ./scripts/set_my_ip.py"
-dev = "python manage.py runserver 0.0.0.0:19003"
-createsuperuser = "python manage.py createsuperuser"
-pre_migrate = "python manage.py makemigrations"
-migrate = "python manage.py migrate"
-startapp = "python manage.py startapp {args}"
+dev = "python src/manage.py runserver 0.0.0.0:19003"
+createsuperuser = "python src/manage.py createsuperuser"
+pre_migrate = "python src/manage.py makemigrations"
+migrate = "python src/manage.py migrate"
+startapp = "python src/manage.py startapp {args}"
 filename = "requirements.txt"

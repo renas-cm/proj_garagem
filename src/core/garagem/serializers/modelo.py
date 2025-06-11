@@ -6,3 +6,4 @@ class ModeloSerializer(ModelSerializer):
     class Meta:
         model = Modelo
         fields = '__all__'
+        
